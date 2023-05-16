@@ -1,15 +1,8 @@
-const letters = document.querySelectorAll(".glow-letter");
+const videoForm = document.getElementById("video-form");
+const videoPlayer = document.getElementById("video-player");
+const defaultVideoId = "EsWlu0olPQU";
 
-letters.forEach((letter) => {
-  letter.addEventListener("mouseover", () => {
-    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-    const randomSize = `${Math.floor(Math.random() * (150 - 100) + 100)}%`;
-    letter.style.setProperty("--color", randomColor);
-    letter.style.fontSize = randomSize;
-    letter.classList.add("letter-jump");
-  });
-
-  letter.addEventListener("animationend", () => {
-    letter.classList.remove("letter-jump");
-  });
+videoForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  videoPlayer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${defaultVideoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 });
