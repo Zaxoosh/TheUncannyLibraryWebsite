@@ -1,31 +1,75 @@
-header {
-  background-color: #4b0082; /* dark purple */
-  padding: 10px;
-  width: 100%;
-  overflow: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--body-color);
+  background-image: url("https://media.sellfy.com/images/TrtqGQQV/wBZW1q8TYi9JmcIqPyjH/FBveYfUMmY.jpeg?w=1200");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.container {
+header {
+  background-color: var(--header-color);
+  padding: 10px;
+  border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+}
+
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #main-header {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--header-text-color);
   text-transform: uppercase;
   white-space: nowrap;
   position: relative;
   z-index: 1;
-  width: 400px; /* set a fixed width */
+  text-align: center;
+}
+
+#main-header span {
+  display: inline-block;
+  animation: bounce 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#main-header span:hover {
+  animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: center; /* Center the navigation items */
 }
 
 nav li {
@@ -33,7 +77,7 @@ nav li {
 }
 
 nav a {
-  color: #ffffff;
+  color: var(--header-text-color);
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -45,11 +89,11 @@ nav a:hover {
 }
 
 button {
-  background: linear-gradient(to bottom right, #8a2be2, #4b0082); /* purple gradient */
-  color: #ffffff;
+  background: linear-gradient(to bottom right, var(--button-gradient-color-1), var(--button-gradient-color-2));
+  color: var(--button-text-color);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 25px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -60,87 +104,77 @@ button:hover {
   transform: scale(1.1);
 }
 
-body {
-  background-color: #bcaaa4;
-  background-image: url("https://www.parliament.uk/contentassets/aa8b9933d3cb4364b827e7a60ea898e0/hl_library_roger-harris2022.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+.color-scheme-1 {
+  --header-color: #4b0082;
+  --header-text-color: #ffffff;
+  --button-gradient-color-1: #8a2be2;
+  --button-gradient-color-2: #4b0082;
+  --button-text-color: #ffffff;
+  --body-color: #bcaaa4;
 }
 
-.letter {
-  display: inline-block;
-  transition: all 0.2s ease-in-out;
+.color-scheme-2 {
+  --header-color: #ff8c00;
+  --header-text-color: #ffffff;
+  --button-gradient-color-1: #ffa500;
+  --button-gradient-color-2: #ff8c00;
+  --button-text-color: #ffffff;
+  --body-color: #f5deb3;
 }
 
-.letter:hover {
-  font-size: 2.5rem;
-  animation: jump-up 0.5s;
+.color-scheme-3 {
+  --header-color: #008080;
+  --header-text-color: #ffffff;
+  --button-gradient-color-1: #00bfff;
+  --button-gradient-color-2: #008080;
+  --button-text-color: #ffffff;
+  --body-color: #e6e6fa;
 }
 
-@keyframes jump-up {
-  0% {
-    transform: translateY(0) rotate(0);
-  }
-  25% {
-    transform: translateY(-10px) rotate(5deg);
-  }
-  75% {
-    transform: translateY(-10px) rotate(-5deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0);
-  }
+/* Center video */
+.video-container {
+  display: flex;
+  justify-content: center;
 }
 
-.dark-mode {
-  background-color: #333;
-  color: #fff;
-}
-
-.dark-mode header {
-  background-color: #111;
-}
-
-.dark-mode nav a {
-  color: #fff;
-}
-
-.dark-mode .letter:hover {
-  color: #ff0;
+video {
+  display: block;
+  margin: 0 auto;
 }
 
 #video-section {
-  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh);
 }
 
-#video-form label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#video-form input[type="text"] {
+#video-player {
+  max-width: 800px;
   width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
+  height: 450px;
+  margin-left: 220px;
 }
 
-#video-form button[type="submit"] {
-  background-color: #4b0082;
-  color: #fff;
+#color-scheme-btn {
+  background: linear-gradient(to bottom right, var(--button-gradient-color-1), var(--button-gradient-color-2));
+  color: var(--button-text-color);
   border: none;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin: 20px 0;
 }
 
-#video-form button[type="submit"]:hover {
+#color-scheme-btn:hover {
   transform: scale(1.1);
 }
 
-#video-player {
-  margin-top: 20px;
+#color-scheme-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
