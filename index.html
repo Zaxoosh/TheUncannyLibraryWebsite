@@ -1,21 +1,51 @@
-<div id="name-container">
-  <span class="glow-letter" id="letter-t">T</span>
-  <span class="glow-letter" id="letter-h">h</span>
-  <span class="glow-letter" id="letter-e">e</span>
-  <span class="glow-letter" id="letter-space">&nbsp;</span>
-  <span class="glow-letter" id="letter-u">U</span>
-  <span class="glow-letter" id="letter-n">n</span>
-  <span class="glow-letter" id="letter-c">c</span>
-  <span class="glow-letter" id="letter-a">a</span>
-  <span class="glow-letter" id="letter-n2">n</span>
-  <span class="glow-letter" id="letter-n3">n</span>
-  <span class="glow-letter" id="letter-y">y</span>
-  <span class="glow-letter" id="letter-space2">&nbsp;</span>
-  <span class="glow-letter" id="letter-l">L</span>
-  <span class="glow-letter" id="letter-i">i</span>
-  <span class="glow-letter" id="letter-b">b</span>
-  <span class="glow-letter" id="letter-r">r</span>
-  <span class="glow-letter" id="letter-a2">a</span>
-  <span class="glow-letter" id="letter-r2">r</span>
-  <span class="glow-letter" id="letter-y2">y</span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Uncanny Library</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 id="main-header">
+          <span class="letter">T</span>
+          <span class="letter">h</span>
+          <span class="letter">e</span>
+          <span class="letter"> </span>
+          <span class="letter">U</span>
+          <span class="letter">n</span>
+          <span class="letter">c</span>
+          <span class="letter">a</span>
+          <span class="letter">n</span>
+          <span class="letter">n</span>
+          <span class="letter">y</span>
+          <span class="letter"> </span>
+          <span class="letter">L</span>
+          <span class="letter">i</span>
+          <span class="letter">b</span>
+          <span class="letter">r</span>
+          <span class="letter">a</span>
+          <span class="letter">r</span>
+          <span class="letter">y</span>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <button id="color-scheme-toggle">Toggle Color Scheme</button>
+    <div id="video-section">
+      <form id="video-form">
+        <label for="video-id">Enter YouTube video ID:</label>
+        <input type="text" id="video-id" name="video-id">
+        <button type="submit">Submit</button>
+      </form>
+      <div id="video-player"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
