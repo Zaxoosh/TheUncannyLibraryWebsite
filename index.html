@@ -5,9 +5,9 @@
     <title>The Uncanny Library</title>
     <link href="style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="color-scheme-1">
     <header>
-      <div class="container">
+      <div class="header-container">
         <h1 id="main-header">
           <span class="letter">T</span>
           <span class="letter">h</span>
@@ -31,20 +31,22 @@
         </h1>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="showcase.html">Showcase</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <button id="color-scheme-toggle">Toggle Color Scheme</button>
-    <div id="video-section">
-      <form id="video-form">
-        <label for="video-id">Enter YouTube video ID:</label>
-        <input type="text" id="video-id" name="video-id">
-        <button type="submit">Submit</button>
-      </form>
-      <div id="video-player"></div>
+    <div id="color-scheme-container">
+      <button id="color-scheme-toggle">Change Color Scheme</button>
+    </div>
+    <div id="content-container">
+      <div id="video-section">
+        <div id="video-player">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EsWlu0olPQU?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
